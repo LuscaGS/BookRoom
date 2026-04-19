@@ -1,0 +1,17 @@
+{
+    "name": "fatec/reservas",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alunos do 2º Semestre de 2024"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^6.9",
+        "bramus/router": "~1.6"
+    }
+}
