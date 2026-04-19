@@ -1,32 +1,122 @@
-# 📚 BookRoom
+📚 BookRoom - Backend
 
-> Sistema moderno para gestão e reserva de salas de aula e reuniões.
+Sistema backend para gerenciamento e reserva de salas, equipamentos e softwares.
 
-O **BookRoom** é uma interface web desenvolvida para facilitar o agendamento de espaços físicos, eliminando conflitos de horários e burocracias manuais. O projeto foca em uma experiência de usuário (UX) limpa e intuitiva.
+📖 Sobre o projeto
 
-## 🚀 Tecnologias Utilizadas
+O BookRoom é uma API backend desenvolvida em PHP com o objetivo de organizar o uso de salas e recursos dentro de uma instituição (como escolas ou empresas).
 
-Este projeto foi construído utilizando as melhores práticas de desenvolvimento web front-end:
+O sistema permite controlar:
 
-* **HTML5:** Estrutura semântica para melhor acessibilidade e SEO.
-* **CSS3:** Estilização avançada com Flexbox, animações personalizadas e design responsivo.
-* **Google Fonts:** Utilização da tipografia *Inter*/*Poppins* para modernidade visual.
+Salas
+Reservas
+Usuários
+Equipamentos
+Softwares disponíveis
 
-## 🛠️ Funcionalidades
+A aplicação segue uma estrutura organizada em camadas, facilitando manutenção e expansão.
 
-- [x] Landing Page responsiva.
-- [x] Sistema de navegação entre páginas.
-- [ ] Fluxo de autenticação (Login/Cadastro) - *Em desenvolvimento*.
-- [ ] Painel de reserva de salas - *Em desenvolvimento*.
+⚙️ Tecnologias utilizadas
+PHP (sem framework)
+SQLite (banco de dados local)
+Composer
+HTML/CSS (estrutura básica em public/)
 
-## 📁 Estrutura do Projeto
+🧱 Arquitetura do projeto
 
-A organização de pastas segue o padrão de separação de responsabilidades:
+O projeto segue um padrão inspirado em MVC:
 
-```text
-├── public/
-│   ├── css/      # Estilos globais e específicos (index.css)
-│   ├── img/      # Assets de imagem e ícones
-│   └── pages/    # Páginas secundárias (Login, Cadastro)
-├── index.html    # Página principal
-└── README.md     # Documentação do projeto
+src/
+ ├── Controller/   # Regras de negócio
+ ├── Model/        # Representação dos dados
+ ├── Router/       # Rotas da API
+ └── Database/     # Conexão e banco SQLite
+
+Principais entidades:
+Usuário
+Sala
+Reserva
+Equipamento
+Software
+Administrador Supremo (controle avançado)
+
+🚀 Funcionalidades
+📌 Cadastro de salas
+🧑‍💻 Cadastro de usuários
+📅 Criação e gerenciamento de reservas
+🖥️ Controle de softwares disponíveis
+🧰 Gerenciamento de equipamentos
+🔐 Controle administrativo
+
+🗂️ Estrutura de pastas
+back-end/
+ ├── public/              # Front básico (HTML, CSS, imagens)
+ ├── src/
+ │    ├── Controller/
+ │    ├── Model/
+ │    ├── Router/
+ │    └── Database/
+ ├── composer.json
+ └── index.html
+ 
+🛠️ Como executar o projeto
+Pré-requisitos
+PHP 7.4+ (ou superior)
+Composer
+Passos
+# Clonar o repositório
+git clone https://github.com/LuscaGS/BookRoom
+
+# Entrar na pasta
+cd BookRoom/back-end
+
+# Instalar dependências
+composer install
+
+# Rodar servidor local
+php -S localhost:8000
+
+Acesse no navegador:
+
+http://localhost:8000
+
+🗄️ Banco de dados
+
+O projeto utiliza SQLite, com arquivo local:
+
+src/Database/database.db
+
+Também há um script SQL disponível:
+
+src/Database/database.sql
+🔌 Rotas da API
+
+As rotas estão organizadas por entidade:
+
+/usuarios
+/salas
+/reservas
+/equipamentos
+/software
+
+Cada rota possui operações básicas como:
+
+GET (listar)
+POST (criar)
+PUT (atualizar)
+DELETE (remover)
+
+📌 Melhorias futuras
+Autenticação com JWT
+Validação de dados mais robusta
+Interface frontend completa
+Integração com banco de dados externo (MySQL/PostgreSQL)
+Logs e monitoramento
+
+👨‍💻 Autor
+
+Desenvolvido pela equipe de estudantes do 2° Semestre de Desenvolvimento de Software Multiplataforma
+
+📄 Licença
+
+Este projeto está sob a licença MIT.
